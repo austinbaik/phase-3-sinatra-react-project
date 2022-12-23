@@ -6,7 +6,7 @@ Brand.create([
     
     {
         name: "Rolex",
-        url: "https://en.wikipedia.org/wiki/Rolex#/media/File:Rolex_logo.svg"
+        url: "https://upload.wikimedia.org/wikipedia/en/9/95/Rolex_logo.svg"
     },
 
     {
