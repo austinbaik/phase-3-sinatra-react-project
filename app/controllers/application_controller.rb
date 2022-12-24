@@ -4,7 +4,7 @@ class ApplicationController < Sinatra::Base
   # Add your routes here
   get "/brands" do
     brands = Brand.all
-    brands.to_json
+    brands.to_json(include: :watches)
   end
 
 
@@ -16,21 +16,36 @@ class ApplicationController < Sinatra::Base
   brand.to_json
   end 
 
+
+
+
   delete '/brands/:id' do
     brand = Brand.find(params[:id])
-    brand.destroy
-    brand.to_json
+    watch = brand.watches.find(
+      id: params[:id]
+    )
+    watch.destroy
+    watch.to_json
   end
 
+
+
   post '/brands/:id' do 
-    brand = Brand.find(params[:id]) 
+    brand = Brand.find(params[:id])
     new_watch = brand.watches.create(
-      params[:name],
-      params[:price],
-      params[:url],
-      params[:model_num]
+
+        # params
+        name: params[:name],
+        image_url: params[:image_url],
+        price: params[:price], 
+        model_num: params[:model_num],
+        brand_id: params[:brandId]
+        
     )
     new_watch.to_json
   end
+
+
+
 
 end
