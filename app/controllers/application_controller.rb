@@ -56,6 +56,17 @@ class ApplicationController < Sinatra::Base
   end
 
 
+patch '/brands/:watchId' do
+  watch = Watch.find(params[:watchId])
+  puts "watch"  
+  watch.update(
+    name: params[:name],
+    image_url: params[:image_url],
+    price: params[:price], 
+    model_num: params[:model_num]
+  )
+  watch.to_json
+end
 
 
 end
