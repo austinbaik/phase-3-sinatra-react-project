@@ -132,3 +132,20 @@ fetch("http://localhost:9292/test")
 [dbdiagram.io]: https://dbdiagram.io/
 [postman download]: https://www.postman.com/downloads/
 [network tab]: https://developer.chrome.com/docs/devtools/network/
+
+
+
+
+what is backend doing 
+
+make snese of the compoenents 
+
+how to install 
+how to use 
+outside resources 
+
+
+drag and drop diagrams / relationships b/t things 
+
+what commands to get server running 
+

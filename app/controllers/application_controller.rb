@@ -17,8 +17,6 @@ class ApplicationController < Sinatra::Base
   end 
 
 
-
-
   # delete '/brands/:id' do
   #   brand = Brand.find(params[:id])
   #   watch = brand.watches.find(
@@ -27,6 +25,7 @@ class ApplicationController < Sinatra::Base
   #   watch.destroy
   #   watch.to_json
   # end
+  
 
   delete '/brands/:watchId' do
     watch = Watch.find(params[:watchId])
