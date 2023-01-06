@@ -13,7 +13,7 @@ class ApplicationController < Sinatra::Base
       name: params[:name],
       url: params[:url]
     )
-  brand.to_json
+  brand.to_json(include: :watches)
   end 
 
 
